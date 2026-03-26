@@ -9,9 +9,9 @@ public record Card(
         String cardHolderName,
         YearMonth expirationDate
 ) {
-
-    public boolean isExpired(YearMonth currentDate) {
-        // ¿La fecha de expiración es anterior a la fecha actual? -> true (está vencida).
+    public boolean isExpired(YearMonth currentDate){
+        //esta expirada si su fecha de expiracion es anterior a la enviada,
+        // es decir, si ya pasó esa fecha de expiracion
         return this.expirationDate.isBefore(currentDate);
     }
 }
